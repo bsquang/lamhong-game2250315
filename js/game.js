@@ -31,6 +31,7 @@ var listWord = [{
       "finish": "3",
       "end": "4"
   };
+  
   var listTile = {
       "newgame": "Game Tìm Ô Giống Nhau",
       "ready": "Chuẩn Bị",
@@ -38,6 +39,7 @@ var listWord = [{
       "win": "Chúc Mừng Bạn Đã Chiến Thắng",
       "lose": "Bạn Đã Thua"
   };
+  
   var waitTime = 11; //10 giay cho truoc khi choi
   var playTime = 61; //1 phut choi game
   var btnSelected = null;
@@ -106,8 +108,6 @@ var listWord = [{
                     
                     countBtn -= 2;
                     if (countBtn <= 0) {
-                      
-                      debugger;
                       
                       stopGame();
                     }
@@ -183,7 +183,7 @@ var listWord = [{
   function gotoPage(id){
     
     $(".page").hide();
-    $(".page[bsq-id="+id+"]").show();
+    $(".page[bsq-id="+id+"]").fadeIn(300);
     
     current = id;
   }
