@@ -66,6 +66,25 @@ body, html, input, textarea{
   font-weight: bold;
 }
 
+.animated {
+/*  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;*/
+  
+  -webkit-transition: 0.3s ease all;
+}
+
+
+.bsq-button:active{
+  background: white;
+  color: #FF8200;
+  
+  -webkit-transform: scale3d(0.8, 0.8, 0.8);
+  transform: scale3d(0.8, 0.8, 0.8);
+
+}
+
 .bsq-game-button{
   width: 140px;
   height: 140px;
@@ -73,6 +92,21 @@ body, html, input, textarea{
   background: url('../img/ICON00.png');
   background-repeat: no-repeat;
   
+}
+.bsq-game-button:active{
+  -webkit-transform: scale3d(0.7, 0.7, 0.7);
+  transform: scale3d(0.7, 0.7, 0.7);
+
+}
+
+.bsq-hidden-button{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  
+  z-index: 999;
 }
 
 .page{

@@ -362,3 +362,7 @@ var listWord = [{
       $(".btn-game").removeClass("btn-touched");
       //setTimeout(function(){readyGame();},5000);
   }
+  
+  function restartApp() {
+      window.location.href = '';
+  }
