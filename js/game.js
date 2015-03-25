@@ -240,13 +240,13 @@ var listWord = [{
   }
   
   function checkScore(s) {
-      if (s < 10) {
+      if (s < 0) {
+          s = "" + s;
+      }else if (s < 10) {
           s = "000" + s;
-      }
-      if (s < 100) {
+      }else if (s < 100) {
           s = "00" + s;
-      }
-      if (s < 1000) {
+      }else if (s < 1000) {
           s = "0" + s;
       }
       return s;

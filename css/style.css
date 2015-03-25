@@ -64,6 +64,8 @@ body, html, input, textarea{
   border-radius: 10px;
   color: white;
   font-weight: bold;
+  
+  cursor: pointer;
 }
 
 .animated {
@@ -72,7 +74,7 @@ body, html, input, textarea{
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;*/
   
-  -webkit-transition: 0.3s ease all;
+  -webkit-transition: 0.1s ease all;
 }
 
 
@@ -92,6 +94,7 @@ body, html, input, textarea{
   background: url('../img/ICON00.png');
   background-repeat: no-repeat;
   
+  cursor: pointer;
 }
 .bsq-game-button:active{
   -webkit-transform: scale3d(0.7, 0.7, 0.7);
