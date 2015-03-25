@@ -96,7 +96,7 @@ var listWord = [{
                   
                   if (btnSelected.attr("data-id") == btnSelected2.attr("data-id")) {
                     
-                    mScore += parseInt(btnSelected.attr("data-score"));
+                    mScore += 50;
                     
                     //btnSelected.css('opacity', '0.0');
                     //btnSelected2.css('opacity', '0.0');
@@ -113,6 +113,9 @@ var listWord = [{
                     }
   
                   } else {
+                    
+                    mScore -= 20;
+                    $("#score").text(checkScore(mScore));
                     
                     setTimeout(function(){
                       
@@ -344,14 +347,20 @@ var listWord = [{
     
       isStart = false;
       isClockRun = false;
+     
       
-      if (countBtn > 0) {
-          alert("You lose!");
-          window.location.href = '';
+      
+      if (countBtn <= 0) {
+            if (mScore >= 200) {
+                  alert("You win!");
+            }else if(mScore < 200){
+                  alert("You lose!");
+            }
       } else {
-          alert("You win!");
-          window.location.href = '';
+          alert("You lose! Time out !");
       }
+      
+      restartApp();
   }
   
   function resetGame() {
