@@ -352,15 +352,15 @@ var listWord = [{
       
       if (countBtn <= 0) {
             if (mScore >= 200) {
-                  alert("You win!");
-            }else if(mScore < 200){
-                  alert("You lose!");
+                  gotoPage(8);
+            }else if(mScore < 200){                  
+                  gotoPage(9);
             }
       } else {
-          alert("You lose! Time out !");
+          gotoPage(9);
       }
       
-      restartApp();
+      
   }
   
   function resetGame() {
