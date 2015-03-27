@@ -346,18 +346,25 @@ var listWord = [{
   function stopGame() {
     
       isStart = false;
-      isClockRun = false;
-     
+      isClockRun = false;     
       
       
       if (countBtn <= 0) {
             if (mScore >= 200) {
-                  gotoPage(8);
-            }else if(mScore < 200){                  
-                  gotoPage(9);
+                  
+                  setTimeout(function(){
+                        gotoPage(8);
+                  },3000);
+                  
+            }else if(mScore < 200){
+                  setTimeout(function(){
+                        gotoPage(9);
+                  },3000);
             }
       } else {
-          gotoPage(9);
+            setTimeout(function(){
+                  gotoPage(9);
+            },3000);
       }
       
       
