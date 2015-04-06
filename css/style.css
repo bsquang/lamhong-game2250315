@@ -112,6 +112,16 @@ body, html, input, textarea{
   z-index: 999;
 }
 
+.bsq-hidden-button-left-top{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  
+  z-index: 999;
+}
+
 .page{
   display: none;
 }

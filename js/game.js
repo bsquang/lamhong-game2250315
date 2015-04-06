@@ -195,7 +195,20 @@ var listWord = [{
     
     $(window).scrollTop(0);
     
-    current += 1; 
+    
+    if (current == 1) {
+      if(localStorage.infoEnable == '0'){
+            current = 6;      
+      }else if(localStorage.infoEnable == '1'){
+            current += 1; 
+      }
+    }
+    else{
+      
+      current += 1;
+      
+    }
+    
     gotoPage(current);  
       
   }
@@ -382,3 +395,29 @@ var listWord = [{
   function restartApp() {
       window.location.href = '';
   }
+  
+
+initSaveConfig();
+function initSaveConfig(){
+  if (localStorage.infoEnable == undefined) {
+    
+    localStorage.setItem('infoEnable','0')
+    
+  }
+  
+  if(localStorage.infoEnable == '0'){
+    
+  }else if(localStorage.infoEnable == '1'){
+    
+  }
+  
+}
+function toggleInfo() {
+    if(localStorage.infoEnable == '0'){
+        localStorage.setItem('infoEnable','1');
+    }else if(localStorage.infoEnable == '1'){
+        localStorage.setItem('infoEnable','0');
+    }
+    
+    restartApp();
+}
